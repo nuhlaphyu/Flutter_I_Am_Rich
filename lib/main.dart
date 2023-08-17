@@ -11,7 +11,14 @@ void main() {
           backgroundColor: Colors.blueGrey[900],
           title: Text("I Am Rich"),
         ), // AppBar
-
+        body: Center(
+          child: Image(
+            image: NetworkImage(
+                'https://miro.medium.com/max/4000/0*6WLqebrITTPNHwu7.gif'),
+            fit: BoxFit.fill,
+          ),
+          ),
+        // Center
 
       ), // Scaffold
     ), // MaterialApp
