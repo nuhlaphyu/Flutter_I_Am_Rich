@@ -62,7 +62,6 @@ class SecondScreen extends StatelessWidget {
             children: [
               Image.asset("assets/images/car.jpeg"),
 
-              // Add some spacing between the images
               Image.asset("assets/images/car.jpeg"),
               // Replace with the actual asset path
             ],
