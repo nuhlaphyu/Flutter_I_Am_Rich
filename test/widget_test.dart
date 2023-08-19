@@ -1,30 +1,84 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_pj/main.dart';
+void main() => runApp(MyApp());
 
-void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MaterialApp());
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final title = 'GeeksForGeeks';
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
+    return MaterialApp(
+      title: title,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(title),
+          backgroundColor: Colors.green,
+        ),
+        body: Container(
+          margin: EdgeInsets.symmetric(vertical: 20.0),
+          height: 550.0,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              Container(
+                height: 480.0,
+                width: 240.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/aquaman.png'),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: BoxShape.rectangle,
+                ),
+              ),
+              Container(
+                height: 480.0,
+                width: 240.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/greenlantern.webp'),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: BoxShape.rectangle,
+                ),
+              ),
+              Container(
+                height: 240.0,
+                width: 240.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/batman.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: BoxShape.rectangle,
+                ),
+              ),
+              Container(
+                height: 480.0,
+                width: 240.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/superman.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: BoxShape.rectangle,
+                ),
+              ),
+              Container(
+                height: 480.0,
+                width: 240.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/wonderwomen.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: BoxShape.rectangle,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
